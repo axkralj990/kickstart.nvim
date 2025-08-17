@@ -64,6 +64,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'debugpy',
       },
     }
 
@@ -104,6 +105,11 @@ return {
     dap.listeners.after.event_initialized['dapui_config'] = dapui.open
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
+
+    require('dap.ext.vscode').load_launchjs(nil, {
+      python = { 'python' },
+      debugpy = { 'python' },
+    })
 
     -- Install golang specific config
     require('dap-go').setup {
