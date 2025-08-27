@@ -31,9 +31,6 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', 'J', '5j', { noremap = true, silent = true })
-vim.keymap.set('n', 'K', '5k', { noremap = true, silent = false })
-
 vim.keymap.set('n', '[b', ':bprevious<cr>', { noremap = true, silent = false })
 vim.keymap.set('n', ']b', ':bnext<cr>', { noremap = true, silent = false })
 vim.keymap.set('n', '[]', ':b#<cr>', { noremap = true, silent = false })
