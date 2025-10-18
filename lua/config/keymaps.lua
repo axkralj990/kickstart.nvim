@@ -34,3 +34,5 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '[b', ':bprevious<cr>', { noremap = true, silent = false })
 vim.keymap.set('n', ']b', ':bnext<cr>', { noremap = true, silent = false })
 vim.keymap.set('n', '[]', ':b#<cr>', { noremap = true, silent = false })
+
+vim.keymap.set('n', '<leader>o', '<cmd>Oil<CR>', { desc = 'Open Oil' })
