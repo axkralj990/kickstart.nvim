@@ -2,6 +2,17 @@ return { -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
   opts = {
+    preset = 'modern',
+    win = {
+      width = { min = 20, max = 0.5 }, -- min 20 chars, max 50% of screen
+      height = { min = 4, max = 0.5 },
+      border = 'rounded',
+      padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
+    },
+    layout = {
+      width = { min = 20, max = 80 }, -- min and max width of the columns
+      spacing = 3, -- spacing between columns
+    },
     icons = {
       -- set icon mappings to true if you have a Nerd Font
       mappings = vim.g.have_nerd_font,
@@ -48,6 +59,9 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>g', group = '[G]it' },
+      { '<leader>u', group = '[U]I Toggles' },
+      { '<leader>b', group = '[B]uffer' },
     },
   },
 }
